@@ -35,6 +35,6 @@ jobs:
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: self
-          BRANCH: gh-pages
+          BRANCH: master
           FOLDER: public
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
