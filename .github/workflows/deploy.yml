@@ -20,7 +20,7 @@ jobs:
     - run: npm install -g gatsby-cli
     - run: npm run format
       env:
-        GH_READ_INFO_TOKEN: ${{ secrets.BLUB }}
+        GH_READ_INFO_TOKEN: ${{ secrets.GH_READ_INFO_TOKEN }}
     - run: npm run build "$GH_READ_INFO_TOKEN"
     - run: npm run publish
 
