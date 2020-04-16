@@ -32,7 +32,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_READ_INFO_TOKEN }}
 
       - name: Publish
-        run: npm run publish
+        uses: s0/git-publish-subdir-action@master
         env:
-          GH_DEPLOY_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
-
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: public
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
