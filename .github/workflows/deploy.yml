@@ -18,6 +18,7 @@ jobs:
         node-version: '10.x'
     - run: npm install
     - run: npm install -g gatsby-cli 
-    - run: npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GB_READ_INFO_TOKEN }} 
+    - run: npm run deploy
+
