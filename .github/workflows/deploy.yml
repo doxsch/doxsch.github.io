@@ -17,11 +17,11 @@ jobs:
       with:
         node-version: '10.x'
     - run: npm install
-    - run: npm install -g gatsby-cli 
-      env:
-        GH_READ_INFO_TOKEN: ${{ secrets.GH_READ_INFO_TOKEN }}
+    - run: npm install -g gatsby-cli
     - run: npm run format
-    - run: npm run build
+      env:
+        GH_READ_INFO_TOKEN: ${{ secrets.BLUB }}
+    - run: npm run build "$GH_READ_INFO_TOKEN"
     - run: npm run publish
 
 
