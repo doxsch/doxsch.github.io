@@ -21,7 +21,7 @@ jobs:
     - run: npm run format
       env:
         GH_READ_INFO_TOKEN: ${{ secrets.GH_READ_INFO_TOKEN }}
-    - run: npm run build "$GH_READ_INFO_TOKEN"
+    - run: GH_READ_INFO_TOKEN="$GH_READ_INFO_TOKEN" npm run build
     - run: npm run publish
 
 
