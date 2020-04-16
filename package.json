@@ -41,7 +41,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "publish": "gh-pages -d public -b master",
+    "publish": "gh-pages -d public -b master -r https://${{ secrets.GH_DEPLOY_TOKEN }}@github.com/doxsch/doxsch.github.io.git",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "deploy": "npm run format && npm run build && npm run publish"
   },
