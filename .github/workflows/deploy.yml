@@ -19,9 +19,9 @@ jobs:
     - run: npm install
     - run: npm install -g gatsby-cli 
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_READ_INFO_TOKEN }}
-        BLUB: BLOB 
-    - run: echo $BLUB
-    - run: npm run deploy
+        GH_READ_INFO_TOKEN: ${{ secrets.GH_READ_INFO_TOKEN }}
+    - run: npm run format
+    - run: npm run build
+    - run: npm run publish
 
 
