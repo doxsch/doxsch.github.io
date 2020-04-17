@@ -15,6 +15,13 @@ export default () => {
                                 name
                                 web_url
                                 image_url
+                                image {
+                                    childImageSharp {
+                                        fixed(width: 64) {
+                                            ...GatsbyImageSharpFixed
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
