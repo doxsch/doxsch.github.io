@@ -239,7 +239,7 @@ export default ({metaData}) => {
                     ))}
                 </Box>
                 <Box mt={16}>
-                    <label>
+                    <label htmlFor={'mode-toggler'}>
                         <Toggle
                             defaultChecked={style === 'dark'}
                             onChange={onThemeChange}
@@ -262,6 +262,7 @@ export default ({metaData}) => {
                                     />
                                 ),
                             }}
+                            id={'mode-toggler'}
                         />
                         <span style={{display: 'none'}}>toggle dark mode</span>
                     </label>
