@@ -48,7 +48,7 @@ export default ({ metaData }) => {
             bio
             login
             url
-            avatarUrl
+            avatarUrl(size: 150)
             isHireable
             location
             company
@@ -59,7 +59,7 @@ export default ({ metaData }) => {
             websiteUrl
             organizations(first: 10) {
               nodes {
-                avatarUrl
+                avatarUrl(size: 35)
               }
             }
           }

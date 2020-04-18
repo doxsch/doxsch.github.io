@@ -6,6 +6,7 @@ import MastHead from '../components/mastHead'
 import useSiteMetadata from '../hooks/siteMetaData'
 import useThemeContext from '../hooks/themeContext'
 import { formatePostDate } from '../components/postCard'
+import SEO from "../components/seo";
 
 export default ({ data }) => {
   const { style } = useThemeContext()
@@ -13,6 +14,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+        <SEO title={post.frontmatter.title} />
       {layout === 'stacked' ?
         <div className="container-lg py-6 p-responsive text-center">
           <MastHead metaData={false} />

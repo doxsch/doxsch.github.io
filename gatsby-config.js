@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     style: `light`,
-    layout: `sidebar`
+    layout: `stacked`,
   },
   pathPrefix: process.env.PATH_PREFIX || "/",
   plugins: [
