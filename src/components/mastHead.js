@@ -89,7 +89,6 @@ export default ({metaData}) => {
         location,
         isDeveloperProgramMember,
         company,
-        url,
     } = user
     return (
         <>
@@ -208,10 +207,10 @@ export default ({metaData}) => {
                             ariaLabel="email"
                         />
                         <PrimerLink
-                            href={url}
+                            href={websiteUrl}
                             color={style === 'dark' ? 'white' : undefined}
                         >
-                            {url}
+                            {websiteUrl}
                         </PrimerLink>
                     </MetaComponent>
                 )}
