@@ -89,6 +89,7 @@ export default ({metaData}) => {
         location,
         isDeveloperProgramMember,
         company,
+        url,
     } = user
     return (
         <>
@@ -207,10 +208,10 @@ export default ({metaData}) => {
                             ariaLabel="email"
                         />
                         <PrimerLink
-                            href={websiteUrl}
+                            href={url}
                             color={style === 'dark' ? 'white' : undefined}
                         >
-                            {websiteUrl}
+                            {url}
                         </PrimerLink>
                     </MetaComponent>
                 )}
@@ -223,12 +224,12 @@ export default ({metaData}) => {
                     </BorderBox>
                 )}
                 <StyledHr color={style}/>
-                <Box mb={1}>
+                {organizations.nodes.length > 0 && <Box mb={1}>
                     <Heading mb={2} fontSize={4} color={style === 'dark' && 'white'}>
                         Organizations
                     </Heading>
-                    {organizations &&
-                    organizations.nodes.map(({avatarUrl}) => (
+
+                    {organizations.nodes.map(({avatarUrl}) => (
                         <PrimerLink
                             className={'avatar-group-item'}
                             style={{cursor: 'pointer'}}
@@ -237,7 +238,7 @@ export default ({metaData}) => {
                             <Avatar size={35} mr={2} src={avatarUrl}/>
                         </PrimerLink>
                     ))}
-                </Box>
+                </Box>}
                 <Box mt={16}>
                     <label htmlFor={'mode-toggler'}>
                         <Toggle
