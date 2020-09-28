@@ -17,7 +17,7 @@ topics:
 
   - name: Kafka
     web_url: https://github.com/topics/kafka
-    image_url: https://logosandtypes.com/wp-content/uploads/kafka.svg
+    image_url: http://assets.stickpng.com/images/584809c9cef1014c0b5e4909.png
  
  -  name: Kubernetes
     web_url: https://github.com/topics/kubernetes
